@@ -1,0 +1,5 @@
+# Ignore compiled Lisp files
+*.fasl
+
+# Ignore Lisp backup files
+*.lisp~
