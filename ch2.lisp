@@ -63,3 +63,29 @@ if x is not null but both car x and enigma on cdr x return NIL then enigma retur
 ;; 	    (and z (+ z 1))))))
 ;; ;mystery returns the index of the first occurrence of x in y
 
+;;exercise 1.7
+;; (defun list-in-list (lst)
+;;   (and (not (null lst))
+;;        (or (listp (car lst))
+;; 	   (list-in-list (cdr lst)))))
+
+;;exercise 1.8.a
+;; (defun n-dots (n)
+;;   (do ((i n (- i 1)))
+;;       ((equal i 0) 'done)
+;;     (format t ".")))
+
+;;exercise 1.8.b
+;; (defun num-a (lst)
+;;   (if (null lst)
+;;       0
+;;       (if (equal (car lst) 'a)
+;; 	  (+ 1 (num-a (cdr lst)))
+;; 	  (num-a (cdr lst)))))
+
+
+;;exercise 1.9a
+;;summit returns the sum of all non-nil elements in a list, two versions, both broken .....
+(defun summit (lst)
+  (remove nil lst)
+  (apply #'+ lst))
